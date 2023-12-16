@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINBOT</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        .mining_card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mining_pic {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .mining_card:hover .mining_pic {
+            transform: scale(1.1);
+        }
+
+        .floating-window {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            display: none;
+            z-index: 1;
+        }
+
+        .mining_card:hover .floating-window {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <body style="background-image: url('back2.jpg'); background-size: cover; background-position: center;">
+            <div class="container">
+                <div class="left">
+                    <title>MINBOT</title>
+                </div>
+            </div>
+        </body>
+    </header>
+    <main>
+        <div class="container">
+            <div class="half1">
+                <div class="row2">
+                    <h2 >
+                        Bridging the gap using a multilingual bot powered by AI
+                    </h2>
+                </div>
+                <div class="row3">
+                    <button class="start" onclick="redirectToNewPage()">
+                        Get Started
+                      </button>
+                </div>
+            </div>
+            
+            <div class="half3 flex-row">
+                <div class="abc"><img src="minbot.png"></div>
+            </div>
+
+            <div class="half2">
+
+                <div class="half2b">
+
+                   <div class="box1">
+                        <div class="mining_card">
+                            <img class="mining_pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_CH4_Fm4TktuJd7AjhfJO0EkBPhI-pAp-xA&usqp=CAU">
+                            <button class="mining_buttons" onmouseover="showFloatingWindow('coal')" onmouseout="hideFloatingWindow('coal')">COAL</button>
+                            <div class="floating-window" id="coalWindow">
+                                <h3>Coal Information</h3>
+                                <p>Coal is a combustible black or brownish-black sedimentary rock. It is primarily composed of carbon.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="box2">
+                        <div class="mining_card">
+                            <img class="mining_pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmaAZwLAir__d3sdyqcbU53OwEldfj9uA8Cg&usqp=CAU">
+                            <button class="mining_buttons" onmouseover="showFloatingWindow('iron')" onmouseout="hideFloatingWindow('iron')">IRON</button>
+                            <div class="floating-window" id="ironWindow">
+                                <h3>Iron Information</h3>
+                                <p>Iron is a chemical element with the symbol Fe (from Latin: ferrum) and atomic number 26.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="box3">
+                        <div class="mining_card">
+                            <img class="mining_pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-AfYdsyjYkp2F3R_-ZxPNlZ2DZi27zmWC0Q&amp;usqp=CAU">
+                            <button class="mining_buttons" onmouseover="showFloatingWindow('copper')" onmouseout="hideFloatingWindow('copper')">COPPER</button>
+                            <div class="floating-window" id="copperWindow">
+                                <h3>Copper Information</h3>
+                                <p>Copper is a chemical element with the symbol Cu (from Latin: cuprum) and atomic number 29.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="box4">
+                        <div class="mining_card">
+                            <img class="mining_pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlC14MZ3W3VlWmJmIMvvbGcEa5GIpRmqAizA&usqp=CAU">
+                            <button class="mining_buttons" onmouseover="showFloatingWindow('zinc')" onmouseout="hideFloatingWindow('zinc')">ZINC</button>
+                            <div class="floating-window" id="zincWindow">
+                                <h3>Zinc Information</h3>
+                                <p>Zinc is a chemical element with the symbol Zn (from Latin: zincum) and atomic number 30.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="infoContainer" class="info-container"></div>
+    </main>
+    <script>
+        function redirectToNewPage() {
+          window.location.href = "botinterface";
+        }
+    
+        document.querySelector("getStartedButton").addEventListener("click", redirectToNewPage);
+    </script>
+</body>
+</html>
